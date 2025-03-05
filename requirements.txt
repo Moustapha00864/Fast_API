@@ -2,4 +2,6 @@ fastapi
 opencv-python
 numpy
 keras
+tensorflow
 uvicorn
+python-multipart
