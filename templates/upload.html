@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Paludisme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            border: 2px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        input[type="file"] {
+            margin: 10px;
+        }
+        img {
+            width: 80%;
+            max-width: 400px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Détection du Paludisme par Image</h2>
+
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".png, .jpg, .jpeg" required>
+            <br>
+            <button type="submit" class="btn">Valider</button>
+        </form>
+
+        {% if filename %}
+            <h3>Résultat de la Prédiction</h3>
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Image uploadée">
+            <h4>Statut : {{ label }}</h4>
+            <p>Précision : {{ probability }}</p>
+            <a href="/" class="btn">Revenir en arrière</a>
+        {% endif %}
+    </div>
+
+</body>
+</html>
