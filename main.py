@@ -1,6 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 import shutil
 import os
+import io
 import cv2
 import numpy as np
 from keras.preprocessing import image as i1
