@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+tensorflow  # Si ton modèle en a besoin
+pillow
+numpy
