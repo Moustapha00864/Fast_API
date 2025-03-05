@@ -1,5 +1,4 @@
 fastapi
-shutil
 opencv-python
 numpy
 keras
