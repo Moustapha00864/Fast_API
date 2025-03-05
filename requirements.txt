@@ -1,6 +1,6 @@
 fastapi
-uvicorn
-tensorflow  # Si ton modèle en a besoin
-pillow
-opencv-python-headless
+shutil
+opencv-python
 numpy
+keras
+uvicorn
